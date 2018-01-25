@@ -1,0 +1,18 @@
+<div class="section-product">
+    <div class="container">
+        <div class="product-single">
+            <div class="product-single-img"><img src="../img/{{Фото}}" alt=""/></div>
+            <div class="product-single-about">
+                <div class="product-single-title">
+                    <h4>{{Название}}</h4>
+                </div>
+                <div class="product-single-description">
+                    <p> {{Описание}}</p>
+                </div>
+                <form action="../models/setNewBasketItem.php?a={{page}}" method="post">
+                    <input type="submit" value="Купить" name="cookbut"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

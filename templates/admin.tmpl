@@ -1,0 +1,67 @@
+<div class="section-admin">
+    <div class="container">
+        <div class="admin-form-wrapper">
+            <div class="admin-form">
+                <div class="admin-form-photo"><img src="https://static.pexels.com/photos/374862/pexels-photo-374862.jpeg" alt=""/></div>
+                <div class="admin-form-content">
+                    <div class="admin-form-group">
+                        <h3>Login:</h3><span>{{user['Логин']}}</span>
+                    </div>
+                    <div class="admin-form-group">
+                        <h3>Number:</h3><span>{{user['Телефон']}}</span>
+                    </div>
+                    <div class="admin-form-group">
+                        <h3>Address:</h3><span>{{user['АдресДоставки']}}</span>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <h2>User Orders</h2>
+            <div class="admin-products">
+                {% for item in userOrder %}
+                <div class="product-single">
+                    <div class="product-single-img"><img src="../img/{{item['МаленькоеФото']}}" alt=""/></div>
+                    <div class="product-single-about">
+                        <div class="product-single-title">
+                            <h4>{{item['Название']}}</h4>
+                        </div>
+                        <div class="product-single-description">
+                            <p>Количество :{{item['Количество']}}</p>
+                        </div>
+                        <div class="product-single-status">
+                            <h4>Status:</h4><span>{{item['Статус']}}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% if admin == 1 %}
+            <hr/>
+            <h2>All Orders</h2>
+            <div class="admin-products-all">
+                {% for item in allOrder %}
+                <div class="product-single">
+                    <div class="product-single-img"><img src="../img/{{item['МаленькоеФото']}}" alt=""/></div>
+                    <div class="product-single-about">
+                        <div class="product-single-title">
+                            <h4>{{item['Название']}}</h4>
+                        </div>
+                        <div class="product-single-from">
+                            <h4>From:</h4><span>{{item['Логин']}}</span>
+                            <h4>Adress:</h4><span>{{item['АдресДоставки']}}</span>
+                            <h4>Telephone:</h4><span>{{item['Телефон']}}</span>
+                        </div>
+                        <div class="product-single-status">
+                            <h4>Status:</h4>
+                            <form action="#">
+                                <button>{{item['Статус']}}</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

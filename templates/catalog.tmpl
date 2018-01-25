@@ -1,0 +1,22 @@
+<div class="section">
+    <div class="container">
+        <div class="products-wrapper">
+            <div class="products">
+                {% for item in resMas %}
+                <div class="product">
+                    <div class="product-img"><img src="../img/{{item['МаленькоеФото']}}" width="300" alt=""/>
+                        <div class="product-img-on"><a href="../controller/C_product.php?a={{item['id']}}"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                    </div>
+                    <div class="product-title">
+                        <h4>{{item['Название']}}</h4>
+                    </div>
+                    <div class="product-description">
+                        <p>{{item['КраткоеОписание']}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+                <a href='C_catalog.php?page={{page}}'><input type="submit" value="More"/></a>
+        </div>
+    </div>
+</div>

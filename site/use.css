@@ -1,0 +1,60 @@
+.coffe{
+	width: 410px;
+	height: 300px;
+	border: 1px solid black;
+	margin: 10px;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.image{
+	display: block;
+	width: 200px;
+	height: 200px;
+	
+}
+.name{
+	width: 200px;
+	text-align: center;
+}
+.button{
+	width: 300px;
+	margin: 10px;
+	background: lightgreen;
+	margin-bottom: 30px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+.text{
+	margin: 15px;
+	display: block;
+}
+.button:hover{
+	background: green;
+	cursor: pointer;
+}
+.full{
+	width: 400px;
+	border: 2px dotted darkblue; 
+}
+.cat-but{
+	color: black;
+	text-decoration: none;
+}
+.image-basket{
+	float: left;
+}
+.basket-product{
+	margin: 10px 20px;
+	width: 600px;
+	height: 250px;
+}
+.clearfix{
+float: none;
+width: 100%;
+}
+.head-product{
+	margin-left: 400px;
+}

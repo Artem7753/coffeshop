@@ -1,0 +1,28 @@
+
+
+    <div class="section-basket">
+        <div class="container">
+            {% for item in goods %}
+            <div class="product-single">
+                <div class="product-single-img"><img src="../img/{{item['МаленькоеФото']}}" alt=""/></div>
+                <div class="product-single-about">
+                    <div class="product-single-title">
+                        <h4>{{item['Название']}}</h4>
+                    </div>
+                    <div class="product-single-description">
+                        <p> {{item['КраткоеОписание']}}</p>
+                    </div>
+                    <div class="product-single-description">
+                        <p>Количество: {{item[6]}}</p>
+                    </div>
+                    <a href="../models/deleteOrder.php?a={{item['id']}}">
+                        <input type="submit" value="Delete"/>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+            <form class="offer" action="../models/acceptOrder.php" method="post">
+                <input type="submit" value="Оформить заказ"/>
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,29 @@
+
+<div class="section-about">
+    <div class="container">
+        <div class="reviews">
+            {% for item in resMas %}
+            <div class="review">
+                <div class="whose">
+                    <h4>{{item['Имя']}}</h4>
+                </div>
+                <div class="commentary">
+                    <p>{{item['Текст']}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <hr/>
+            <form action="../models/server.php?a=" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="your name" required="required"/>
+                    <input type='hidden' name='hid' value='{{page}}'>
+                </div>
+                <div class="form-group">
+                    <label for="commentary">Commentary:</label>
+                    <textarea type="text" name="comment" id="commentary" placeholder="your commentary" required="required"></textarea>
+                </div>
+                <input type="submit" value="Send" name="subm"/>
+            </form>
+        </div>
+    </div>
